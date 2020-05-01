@@ -13,7 +13,6 @@ after_success:
   - docker build -t rmaznytsia/multi-worker ./worker
   - docker build -t rmaznytsia/multi-server ./server
   - docker nginx -t rmaznytsia/multi-nginx ./nginx
-
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID"  --password-stdin
   - docker push rmaznytsia/multi-client  
   - docker push rmaznytsia/multi-worker
@@ -21,5 +20,7 @@ after_success:
   - docker push rmaznytsia/multi-nginx
 
   
+
+
   
  
